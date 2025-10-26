@@ -1,0 +1,28 @@
+{
+  "name": "movie-express-2327240040",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev" : "nodemon app.js"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Obertsean111/Movie-Express-2327240040.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Obertsean111/Movie-Express-2327240040/issues"
+  },
+  "homepage": "https://github.com/Obertsean111/Movie-Express-2327240040#readme",
+  "dependencies": {
+    "express": "^5.1.0",
+    "mongoose": "^8.19.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
