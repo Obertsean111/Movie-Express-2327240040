@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev" : "nodemon app.js"
+    "dev": "nodemon app.js"
   },
   "type": "module",
   "repository": {
@@ -19,7 +19,9 @@
   },
   "homepage": "https://github.com/Obertsean111/Movie-Express-2327240040#readme",
   "dependencies": {
+    "bcrypt": "^6.0.0",
     "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.19.2"
   },
   "devDependencies": {
