@@ -8,12 +8,12 @@ const api = express.Router();
 api.post("/signin", userController.signIn);
 api.post("/signup", userController.signUp);
 
-api.get("/movie", movieController.Movie);
+api.get("/movie", movieController.movie);
 api.get("/movie", movieController.detailsMovie);
 api.post("/movie", movieController.addMovie);
 api.put("/movie/:id", movieController.updateMovie);
 api.delete("/movie/:id", movieController.deleteMovie);
-api.get("/movie", authenticateTokenMiddleware, movieController.Movie);
+api.get("/movie", authenticateTokenMiddleware, movieController.movie);
 api.get("/movie", authenticateTokenMiddleware, movieController.detailsMovie);
 api.post("/movie", authenticateTokenMiddleware, movieController.addMovie);
 api.put("/movie/:id", authenticateTokenMiddleware, movieController.updateMovie);
