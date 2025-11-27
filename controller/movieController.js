@@ -1,8 +1,10 @@
+import mongoose from "mongoose";
 import MovieModel from "../models/movieModel.js";
+
 
 export const movie = async(req, res) => {
     try {
-        const movie = (await MovieModel.find({ createdBy: req.user ? .user_id })).toSorted({ createdAt: -1 });
+        const movie = await MovieModel.find({ createdBy: req.user ? .user_id }).toSorted({ createdAt: -1 });
 
         res.status(200).json({
             message: "Daftar Semua Movie : ",
@@ -93,7 +95,7 @@ export const updateMovie = async(req, res) => {
         const response = await MovieModel.findOneAndUpdate({
             _id: id,
             createdBy: req.user ? .user_id,
-        }, { judul, tahunRilis, sutradara });
+        }, { judul, tahunRilis, sutradara }, { new: true });
 
         if (!response) {
             return res.status(404).json({
