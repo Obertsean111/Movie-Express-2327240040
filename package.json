@@ -19,13 +19,16 @@
   },
   "homepage": "https://github.com/Obertsean111/Movie-Express-2327240040#readme",
   "dependencies": {
+<<<<<<< Updated upstream
     "bcrypt": "^6.0.0",
+=======
+>>>>>>> Stashed changes
     "cors": "^2.8.5",
     "express": "^5.1.0",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.19.2"
   },
   "devDependencies": {
-    "nodemon": "^3.1.10"
+    "nodemon": "^3.1.11"
   }
 }
