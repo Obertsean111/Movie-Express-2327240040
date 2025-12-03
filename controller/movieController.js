@@ -4,7 +4,7 @@ import MovieModel from "../models/movieModel.js";
 
 export const movie = async(req, res) => {
     try {
-        const movie = await MovieModel.find({ createdBy: req.user ? .user_id }).toSorted({ createdAt: -1 });
+        const movie = await MovieModel.find({ createdBy: req.user ?.user_id,}).toSorted({ createdAt: -1 });
 
         res.status(200).json({
             message: "Daftar Semua Movie : ",
@@ -29,7 +29,7 @@ export const addMovie = async(req, res) => {
             });
         }
 
-        const movie = await MovieModel.create({ judul, tahunRilis, sutradara, createdBy: req.user ? .user_id });
+        const movie = await MovieModel.create({ judul, tahunRilis, sutradara, createdBy: req.user ?.user_id });
 
         res.status(201).json({
             message: "Movie berhasil ditambahkan",
@@ -57,7 +57,7 @@ export const detailsMovie = async(req, res) => {
 
         const movie = await MovieModel.findOne({
             _id: id,
-            createdBy: req.user ? .user_id,
+            createdBy: req.user ?.user_id,
         });
 
         if (!movie) {
@@ -94,7 +94,7 @@ export const updateMovie = async(req, res) => {
 
         const response = await MovieModel.findOneAndUpdate({
             _id: id,
-            createdBy: req.user ? .user_id,
+            createdBy: req.user ?.user_id,
         }, { judul, tahunRilis, sutradara }, { new: true });
 
         if (!response) {
@@ -130,7 +130,7 @@ export const deleteMovie = async(req, res) => {
 
         const response = await MovieModel.findByIdAndDelete({
             _id: id,
-            createdBy: req.user ? .user_id,
+            createdBy: req.user ?.user_id,
         });
 
         if (!response) {

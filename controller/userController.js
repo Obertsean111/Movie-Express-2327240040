@@ -1,6 +1,6 @@
-import userModel from "../models/userModel";
-import { hashedPassword, verifyPassword } from "../utils/hashUtil";
-import { getJwtToken } from "../utils/jwtUtil";
+import userModel from "../models/userModel.js";
+import { hashedPassword, verifyPassword } from "../utils/hashUtil.js";
+import { getJwtToken } from "../utils/jwtUtil.js";
 
 export const signIn = async(req, res) => {
     try {
